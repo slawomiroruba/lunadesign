@@ -125,6 +125,12 @@ STYLESHEET INDEXING
     z-index: 100;
 }
 
+@media screen and (max-width: 762px) {
+    #preloader {
+        background-size: 40%;
+    }
+}
+
 /*-------------------------
     Reset Styels
 -------------------------*/
