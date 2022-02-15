@@ -24,6 +24,7 @@
 </head>
 
 <body class="sticky-header">
+    <div id="preloader"></div>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   	<![endif]-->
@@ -182,9 +183,9 @@
             <div class="container">
                 <div class="call-to-action">
                     <div class="section-heading heading-light">
-                        <span class="subtitle">Let's Work Together</span>
-                        <h2 class="title">Need a successful project?</h2>
-                        <a href="contact.html" class="axil-btn btn-large btn-fill-white">Estimate Project</a>
+                        <span class="subtitle">Nawiążmy współpracę</span>
+                        <h2 class="title">Masz pomysł i chcesz go zrealizować?</h2>
+                        <a href="contact.html" class="axil-btn btn-large btn-fill-white">Bezpłatna wycena</a>
                     </div>
                     <div class="thumbnail">
                         <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">
@@ -294,7 +295,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="footer-copyright">
-                                <span class="copyright-text">© 2022. Wszystkie prawa zastrzeżone <a href="https://axilthemes.com/">Axilthemes</a>.</span>
+                                <span class="copyright-text">© 2022. Wszystkie prawa zastrzeżone <span class="text-color_primary">LunaDesign</span>.</span>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -364,7 +365,12 @@
             </div>
         </div>
     </div>
-
+    <script>
+        let loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none"
+        })
+    </script>
     <!-- Jquery Js -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>

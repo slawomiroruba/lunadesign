@@ -116,6 +116,15 @@ STYLESHEET INDEXING
     --h6: 20px;
 }
 
+#preloader {
+    background: #ffffff url("/assets/media/preloader.gif") no-repeat center center;
+    background-size: 8%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 /*-------------------------
     Reset Styels
 -------------------------*/
