@@ -1094,9 +1094,10 @@ input {
 }
 
 .axil-btn.btn-fill-white:hover {
-    background-color: var(--color-accent1);
+    background-color: var(--gradient-blue);
     color: var(--color-white);
 }
+
 
 .axil-btn.btn-large {
     padding: 23px 55px;
