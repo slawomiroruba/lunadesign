@@ -1220,7 +1220,7 @@ Pagination
 }
 
 .section-heading .subtitle {
-    color: var(--color-primary);
+    color: var(--color-white);
     font-weight: 500;
     font-size: 20px;
     font-family: var(--font-primary);
