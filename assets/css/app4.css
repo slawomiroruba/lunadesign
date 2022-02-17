@@ -1094,7 +1094,7 @@ input {
 }
 
 .axil-btn.btn-fill-white:hover {
-    background-color: var(--color-chart2);
+    background-color: var(--color-blue-shade);
     color: var(--color-white);
 }
 
