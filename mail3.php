@@ -38,13 +38,14 @@ if ($name == "") {
     $headers .= 'From:  Your LunaDesign website' . "\r\n";
 }
 
+var_dump($headers);
 
-
-if (mail($to, $subject, $_message, $headers)) {
-    echo $msg['success'];
-} else {
-    echo $msg['fail'];
-}
+//if (mail($to, $subject, $_message, $headers)) {
+//    var_dump($g);
+//    echo $msg['success'];
+//} else {
+//    echo $msg['fail'];
+//}
 
 
 
