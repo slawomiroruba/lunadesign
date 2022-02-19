@@ -61,7 +61,7 @@ STYLESHEET INDEXING
     Variables
 -------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap');
 
 :root {
     --color-primary: #2149A3;
@@ -98,7 +98,7 @@ STYLESHEET INDEXING
     --border-lighter: 1px solid #ECF2F6;
     --border-dark: 1px solid var(--color-ship-gray);
     --border-gray: 1px solid var(--color-gray-4);
-    --font-primary: 'Times New Roman', sans-serif;
+    --font-primary: 'Spartan', sans-serif;
     --font-secondary: 'Lato', sans-serif;
     --font-awesome: 'Font Awesome 5 Pro';
     --transition: all 0.3s ease-in-out;
@@ -3248,12 +3248,12 @@ Pagination
 .banner.banner-style-4 {
     background: -webkit-linear-gradient(left, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
     background: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-    padding: 310px 0 100px;
+    padding: 200px 0 100px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .banner.banner-style-4 {
-        padding: 250px 0 100px;
+        padding: 200px 0 100px;
     }
 }
 
@@ -3327,7 +3327,7 @@ Pagination
 
 @media only screen and (max-width: 575px) {
     .banner.banner-style-4 .banner-content .title {
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 30px;
     }
 }
@@ -8736,7 +8736,7 @@ Pagination
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: end;
     margin: 0 -5px;
 }
 
