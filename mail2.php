@@ -41,13 +41,14 @@
 //    $msg['success'] = "\n Email has been sent successfully.";
 //    $msg['code'] = TRUE;
 //}
-$msg_success = 'Your message sent successfully';
-$msg_fail = 'Something Went Wrong';
 $to = 'slawomir.oruba@gmail.com';
 $subject = 'Hi!';
 $body = 'Hi, How are you?';
-if (mail($to, $subject, $body)) {
-    echo json_encode($msg_success);
+
+$result = mail($to, $subject, $body);
+
+if ($result) {
+    echo json_encode($result);
 } else {
-    echo json_encode($msg_fail);
+    echo json_encode($result);
 }
