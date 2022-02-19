@@ -40,12 +40,12 @@ if ($name == "") {
 
 var_dump($headers);
 
-//if (mail($to, $subject, $_message, $headers)) {
-//    var_dump($g);
-//    echo $msg['success'];
-//} else {
-//    echo $msg['fail'];
-//}
+if (mail($to, $subject, $_message, $headers)) {
+    var_dump($g);
+    echo $msg['success'];
+} else {
+    echo $msg['fail'];
+}
 
 
 
