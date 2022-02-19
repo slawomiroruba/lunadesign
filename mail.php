@@ -24,7 +24,7 @@ if ($name == "") {
     $msg['field'] = "contact-message";
     $msg['code'] = FALSE;
 } else {
-    $to = 'biuro@lunadesign.pl';
+    $to = 'slawomir.oruba@gmail.com';
     $subject = 'Wypełniono formularz kontaktowy';
     $_message = '<html><head></head><body>';
     $_message .= '<p>Name: ' . $name . '</p>';
@@ -36,9 +36,7 @@ if ($name == "") {
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers .= 'From:  Your LunaDesign website' . "\r\n";
-    $headers .= 'cc: test@gmail.com' . "\r\n";
-    $headers .= 'bcc: test@example.com' . "\r\n";
-    mail($to, $subject, $_message, $headers, '-f contact@example.com');
+    mail($to, $subject, $_message, $headers);
 
     $msg['success'] = "\n Email has been sent successfully.";
     $msg['code'] = TRUE;
