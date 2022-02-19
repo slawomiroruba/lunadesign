@@ -48,7 +48,7 @@ $body = 'Hi, How are you?';
 $result = mail($to, $subject, $body);
 
 if ($result) {
-    echo json_encode($result);
+    var_dump($result);
 } else {
-    echo json_encode($result);
+    var_dump($result);
 }
