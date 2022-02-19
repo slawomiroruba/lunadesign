@@ -45,7 +45,7 @@ if ($name == "") {
     $msg['success'] = 'Success';
 
     $msg['fail'] = 'Fail';
-    if (mail($to, $subject, $_message, $headers)) {
+    if (mail($to, $subject, $_message)) {
         echo $msg['success'];
 
     } else {
