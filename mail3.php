@@ -6,12 +6,10 @@ $message = trim($_POST['contact-message']);
 
 $to = 'slawomir.oruba@gmail.com';
 $subject = 'Wypełniono formularz kontaktowy';
-$_message = '<html><head></head><body>';
-$_message .= '<p>Name: ' . $name . '</p>';
-$_message .= '<p>Email: ' . $email . '</p>';
-$_message .= '<p>Company: ' . $company . '</p>';
-$_message .= '<p>Message: ' . $message . '</p>';
-$_message .= '</body></html>';
+$_message .= 'Name: ' . $name . \n;
+$_message .= 'Email: ' . $email . \n;
+$_message .= 'Company: ' . $company . \n;
+$_message .= 'Message: ' . $message . \n;
 
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
