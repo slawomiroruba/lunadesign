@@ -38,9 +38,14 @@ if ($name == "") {
     $_message .= '<p>Wiadomość: ' . $message . '</p>';
     $_message .= '</body></html>';
 
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From:  Your LunaDesign website' . "\r\n";
+    $headers  = "From: testsite <mail@testsite.com>\n";
+    $headers .= "Cc: testsite <mail@testsite.com>\n";
+    $headers .= "X-Sender: testsite <mail@testsite.com>\n";
+    $headers .= 'X-Mailer: PHP/' . phpversion();
+    $headers .= "X-Priority: 1\n"; // Urgent message!
+    $headers .= "Return-Path: mail@testsite.com\n"; // Return path for errors
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=iso-8859-1\n";
 
     $msg['success'] = 'Success';
 
