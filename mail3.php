@@ -3,18 +3,44 @@ $name = trim($_POST['contact-name']);
 $email = trim($_POST['contact-email']);
 $phone = trim($_POST['contact-phone']);
 $message = trim($_POST['contact-message']);
+if ($name == "") {
+    $msg['err'] = "\n Pole nie może być puste!";
+    $msg['field'] = "contact-name";
+    $msg['code'] = FALSE;
+} else if ($email == "") {
+    $msg['err'] = "\n Pole nie może być puste!";
+    $msg['field'] = "contact-email";
+    $msg['code'] = FALSE;
+} else if ($phone == "") {
+    $msg['err'] = "\n Pole nie może być puste!";
+    $msg['field'] = "contact-company";
+    $msg['code'] = FALSE;
+} else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    $msg['err'] = "\n Please put a valid email address!";
+    $msg['field'] = "contact-email";
+    $msg['code'] = FALSE;
+} else if ($message == "") {
+    $msg['err'] = "\n Message can not be empty!";
+    $msg['field'] = "contact-message";
+    $msg['code'] = FALSE;
+} else {
+    $to = 'slawomir.oruba@gmail.com';
+    $subject = 'Wypelniono formularz kontaktowy';
+    $_message = '<html><head></head><body>';
+    $_message .= '<p>Imię i nazwisko: ' . $name . '</p>';
+    $_message .= '<p>Email: ' . $email . '</p>';
+    $_message .= '<p>Telefon: ' . $company . '</p>';
+    $_message .= '<p>Wiadomość: ' . $message . '</p>';
+    $_message .= '</body></html>';
 
-$to = 'slawomir.oruba@gmail.com';
-$subject = 'Wypelniono formularz kontaktowy';
-$_message .= 'Name: ' . $name . "\r\n";
-$_message .= 'Email: ' . $email . "\r\n";
-$_message .= 'Telefon: ' . $phone . "\r\n";
-$_message .= 'Wiadomosc: ' . $message . "\r\n";
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= 'From:  Your LunaDesign website' . "\r\n";
+}
 
-$msg['success'] = "\n Email has been sent successfully.";
-$msg['fail'] = "\n Email has been not sent.";
 
-if (mail($to, $subject, $_message)) {
+
+if (mail($to, $subject, $_message, $headers)) {
     echo $msg['success'];
 } else {
     echo $msg['fail'];
