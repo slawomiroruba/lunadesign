@@ -1,15 +1,15 @@
 <?php
 $name = trim($_POST['contact-name']);
 $email = trim($_POST['contact-email']);
-$company = trim($_POST['contact-company']);
+$phone = trim($_POST['contact-phone']);
 $message = trim($_POST['contact-message']);
 
 $to = 'slawomir.oruba@gmail.com';
-$subject = 'Wypełniono formularz kontaktowy';
-$_message .= 'Name: ' . $name . '\n';
-$_message .= 'Email: ' . $email . '\n';
-$_message .= 'Company: ' . $company . '\n';
-$_message .= 'Message: ' . $message . '\n';
+$subject = 'Wypelniono formularz kontaktowy';
+$_message .= 'Name: ' . $name . "\r\n";
+$_message .= 'Email: ' . $email . "\r\n";
+$_message .= 'Telefon: ' . $phone . "\r\n";
+$_message .= 'Wiadomosc: ' . $message . "\r\n";
 
 $msg['success'] = "\n Email has been sent successfully.";
 $msg['fail'] = "\n Email has been not sent.";
