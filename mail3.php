@@ -7,43 +7,51 @@ if ($name == "") {
     $msg['err'] = "\n Pole nie może być puste!";
     $msg['field'] = "contact-name";
     $msg['code'] = FALSE;
+    echo 'check name';
 } else if ($email == "") {
     $msg['err'] = "\n Pole nie może być puste!";
     $msg['field'] = "contact-email";
     $msg['code'] = FALSE;
+    echo 'check email';
 } else if ($phone == "") {
     $msg['err'] = "\n Pole nie może być puste!";
-    $msg['field'] = "contact-company";
+    $msg['field'] = "contact-phone";
     $msg['code'] = FALSE;
 } else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
     $msg['err'] = "\n Please put a valid email address!";
     $msg['field'] = "contact-email";
     $msg['code'] = FALSE;
+    echo 'check email';
 } else if ($message == "") {
     $msg['err'] = "\n Message can not be empty!";
     $msg['field'] = "contact-message";
     $msg['code'] = FALSE;
+    echo 'check message';
 } else {
+    echo 'prepare email';
     $to = 'slawomir.oruba@gmail.com';
     $subject = 'Wypelniono formularz kontaktowy';
     $_message = '<html><head></head><body>';
     $_message .= '<p>Imię i nazwisko: ' . $name . '</p>';
     $_message .= '<p>Email: ' . $email . '</p>';
-    $_message .= '<p>Telefon: ' . $company . '</p>';
+    $_message .= '<p>Telefon: ' . $phone . '</p>';
     $_message .= '<p>Wiadomość: ' . $message . '</p>';
     $_message .= '</body></html>';
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers .= 'From:  Your LunaDesign website' . "\r\n";
-}
 
-if (mail($to, $subject, $_message, $headers)) {
-    echo $msg['success'];
-} else {
-    echo $msg['fail'];
-}
+    $msg['success'] = 'Success';
 
+    $msg['fail'] = 'Fail';
+    if (mail($to, $subject, $_message, $headers)) {
+        echo $msg['success'];
+
+    } else {
+        echo $msg['fail'];
+    }
+}
 
 
 
