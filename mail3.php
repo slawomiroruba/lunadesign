@@ -19,7 +19,7 @@ $headers .= 'From:  Your LunaDesign website' . "\r\n";
 $msg['success'] = "\n Email has been sent successfully.";
 $msg['fail'] = "\n Email has been not sent.";
 
-if (mail($to, $subject, $_message, $headers)) {
+if (mail($to, $subject, $_message)) {
     echo $msg['success'];
 } else {
     echo $msg['fail'];
