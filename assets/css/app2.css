@@ -3950,26 +3950,26 @@ Pagination
 }
 
 .contact-info .phone-number {
-    font-size: 48px;
+    font-size: 38px;
     color: var(--color-accent2);
     margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1199px) {
     .contact-info .phone-number {
-        font-size: 42px;
+        font-size: 38px;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .contact-info .phone-number {
-        font-size: 34px;
+        font-size: 28px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .contact-info .phone-number {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
@@ -10166,4 +10166,8 @@ Pagination
     .pb_sm--0 {
         padding-bottom: 0;
     }
+}
+
+.own-height {
+    min-height: 100vh;
 }
